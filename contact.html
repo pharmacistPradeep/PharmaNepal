@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Pradeep Kumar | QC Manager &amp; Pharmaceutical Expert | PharmaGuidelines</title>
+  <meta name="description" content="Get in touch with Pradeep Kumar, QC Manager and pharmaceutical expert based in Nepal. Contact for professional inquiries, collaborations, and pharmaceutical consultancy." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Contact page extras */
+    .contact-intro-card {
+      background: linear-gradient(135deg, var(--secondary) 0%, #254870 100%);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      margin-bottom: 24px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-intro-card::after {
+      content: '';
+      position: absolute;
+      width: 250px; height: 250px; border-radius: 50%;
+      background: rgba(232,115,12,0.1);
+      right: -60px; top: -80px;
+    }
+    .contact-intro-img {
+      width: 100px; height: 100px; border-radius: 50%;
+      border: 4px solid var(--primary); object-fit: cover; flex-shrink: 0;
+      position: relative; z-index: 1;
+    }
+    .contact-intro-text { position: relative; z-index: 1; }
+    .contact-intro-text h3 {
+      font-family: 'Lato', sans-serif; font-size: 22px; font-weight: 900;
+      color: #fff; margin-bottom: 4px;
+    }
+    .contact-intro-text .role-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--primary); color: #fff;
+      padding: 4px 14px; border-radius: 20px;
+      font-size: 12.5px; font-weight: 700; margin-bottom: 10px;
+    }
+    .contact-intro-text p { color: rgba(255,255,255,0.82); font-size: 14px; line-height: 1.65; }
+
+    /* Success state */
+    .form-success {
+      display: none; flex-direction: column; align-items: center; justify-content: center;
+      padding: 40px 20px; text-align: center;
+    }
+    .form-success .success-icon {
+      width: 64px; height: 64px; background: rgba(39,174,96,0.12);
+      border: 2px solid var(--success); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; color: var(--success); margin-bottom: 14px;
+    }
+    .form-success h4 { font-family: 'Lato', sans-serif; font-size: 20px; font-weight: 900; color: var(--text-dark); margin-bottom: 6px; }
+    .form-success p { font-size: 14px; color: var(--text-medium); }
+
+    /* Map embed style */
+    .map-info-bar {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      padding: 14px 20px; background: var(--light-bg); border-top: 1px solid var(--border);
+    }
+    .map-info-chip {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; color: var(--text-medium);
+    }
+    .map-info-chip i { color: var(--primary); }
+
+    /* Working hours */
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr td { padding: 9px 14px; font-size: 13.5px; border-bottom: 1px solid var(--border-light); }
+    .hours-table tr:last-child td { border-bottom: none; }
+    .hours-table tr td:first-child { color: var(--text-medium); font-weight: 600; }
+    .hours-table tr td:last-child { text-align: right; color: var(--text-dark); font-weight: 600; }
+    .hours-available { color: var(--success) !important; }
+    .hours-closed { color: #dc3545 !important; }
+
+    /* Social links */
+    .social-links { display: flex; gap: 10px; flex-wrap: wrap; padding: 14px 20px; border-top: 1px solid var(--border); }
+    .social-btn {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 16px; border-radius: 4px;
+      font-size: 13px; font-weight: 700; transition: var(--transition);
+      color: #fff; text-decoration: none;
+    }
+    .social-btn.email { background: var(--primary); }
+    .social-btn.linkedin { background: #0a66c2; }
+    .social-btn.researchgate { background: #00ccbb; }
+    .social-btn:hover { opacity: 0.88; transform: translateY(-1px); color: #fff; }
+
+    /* FAQ accordion */
+    .faq-item { border-bottom: 1px solid var(--border-light); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; cursor: pointer; font-weight: 600; font-size: 14.5px;
+      color: var(--text-dark); transition: var(--transition); user-select: none;
+    }
+    .faq-q:hover { color: var(--primary); }
+    .faq-q i { font-size: 13px; color: var(--primary); transition: transform 0.28s ease; }
+    .faq-q.open i { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+    }
+    .faq-a p { padding: 0 0 14px; font-size: 13.5px; color: var(--text-medium); line-height: 1.7; }
+    .faq-a.open { max-height: 300px; }
+  </style>
+</head>
+<body>
+
+  <!-- Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-inner container">
+      <span class="ticker-label">📢 Latest</span>
+      <div class="ticker-scroll">
+        <span class="ticker-text">
+          Open for professional consultancy &amp; collaboration in pharmaceutical QC &amp; QA &nbsp;|&nbsp;
+          Currently: QC Manager at Zydin Biotech Ltd., Chitwan, Nepal &nbsp;|&nbsp;
+          Published Researcher · 3 International Journal Publications · Impact Factor 7.4–7.5 &nbsp;|&nbsp;
+          Contact: plexus0307@gmail.com | +977-9821811294
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Top -->
+  <div class="header-top">
+    <div class="container">
+      <div class="logo-area">
+        <div class="logo-icon">💊</div>
+        <div class="logo-text">
+          <h1>PharmaGuidelines</h1>
+          <p>Quality · Compliance · Excellence</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-chips">
+          <span class="header-chip"><i class="fas fa-map-marker-alt"></i> Parwanipur, Bara, Nepal</span>
+          <span class="header-chip"><i class="fas fa-phone"></i> +977-9821811294</span>
+          <span class="header-chip"><i class="fas fa-envelope"></i> plexus0307@gmail.com</span>
+        </div>
+        <div style="margin-top:4px;">
+          <span class="npc-reg"><i class="fas fa-id-card"></i> NPC Reg. No.: G2392</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-nav" id="main-nav">
+    <div class="container nav-inner">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html"><i class="fas fa-user"></i> About Author</a></li>
+        <li><a href="articles.html"><i class="fas fa-flask"></i> Pharma Guidelines</a></li>
+        <li class="active"><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="nav-search">
+          <input type="text" id="search-input" placeholder="Search guidelines..." aria-label="Search" />
+          <button id="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <div class="page-banner">
+    <div class="container">
+      <h2>Get in <span>Touch</span></h2>
+      <div class="breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <i class="fas fa-chevron-right" style="font-size:10px;"></i>
+        <span>Contact</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="main-layout">
+
+      <!-- Content Area -->
+      <main class="content-area">
+
+        <!-- Intro card -->
+        <div class="contact-intro-card fade-in">
+          <img src="image of pradeep kumar.png" alt="Pradeep Kumar" class="contact-intro-img" />
+          <div class="contact-intro-text">
+            <h3>Pradeep Kumar</h3>
+            <div class="role-badge"><i class="fas fa-microscope"></i> QC Manager &amp; Pharmaceutical Expert</div>
+            <p>
+              Thank you for visiting PharmaGuidelines. I welcome professional inquiries, collaboration opportunities, and discussions related to pharmaceutical quality control, GMP compliance, regulatory affairs, and analytical method development. Please fill out the form below or reach me directly via contact details.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form + Info Grid -->
+        <div class="contact-grid fade-in">
+
+          <!-- Contact Form -->
+          <div class="card" style="margin-bottom:0;">
+            <div class="card-header">
+              <div class="card-header-icon"><i class="fas fa-paper-plane"></i></div>
+              <h3>Send a Message</h3>
+            </div>
+            <div class="card-body" id="form-area">
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="fname">First Name *</label>
+                    <input type="text" id="fname" placeholder="Your first name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="lname">Last Name *</label>
+                    <input type="text" id="lname" placeholder="Your last name" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" placeholder="your@email.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="+977-XXXXXXXXXX" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <select id="subject" required>
+                    <option value="">— Select a Subject —</option>
+                    <option value="qc">Quality Control Inquiry</option>
+                    <option value="gmp">GMP / Regulatory Compliance</option>
+                    <option value="validation">Analytical Method Validation</option>
+                    <option value="publication">Research Collaboration</option>
+                    <option value="training">Training &amp; Consultancy</option>
+                    <option value="job">Professional Opportunity</option>
+                    <option value="other">Other Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea id="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <div class="form-group" style="display:flex;align-items:center;gap:8px;">
+                  <input type="checkbox" id="consent" style="width:auto;margin:0;" />
+                  <label for="consent" style="text-transform:none;letter-spacing:0;font-weight:400;font-size:13px;color:var(--text-medium);margin:0;">
+                    I agree that this information may be used to respond to my inquiry.
+                  </label>
+                </div>
+                <button type="submit" class="submit-btn" id="submit-btn">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+            <!-- Success state -->
+            <div class="form-success" id="form-success">
+              <div class="success-icon"><i class="fas fa-check"></i></div>
+              <h4>Message Sent!</h4>
+              <p>Thank you for reaching out. Pradeep Kumar will get back to you soon, typically within 1–2 business days.</p>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="card" style="margin-bottom:0;">
+            <div class="card-header">
+              <div class="card-header-icon"><i class="fas fa-address-card"></i></div>
+              <h3>Contact Information</h3>
+            </div>
+            <div class="card-body">
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-user-tie"></i></div>
+                <div class="contact-text">
+                  <strong>Full Name</strong>
+                  <span>Pradeep Kumar</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-building"></i></div>
+                <div class="contact-text">
+                  <strong>Current Organization</strong>
+                  <span>Zydin Biotech Ltd., Bharatpur-16, Chitwan, Nepal</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="contact-text">
+                  <strong>Designation</strong>
+                  <span>QC Manager — Oncology API &amp; Formulations (R&amp;D)</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-text">
+                  <strong>Email Address</strong>
+                  <a href="mailto:plexus0307@gmail.com">plexus0307@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-text">
+                  <strong>Mobile No. 1</strong>
+                  <a href="tel:+9779821811294">+977-9821811294</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-text">
+                  <strong>Mobile No. 2</strong>
+                  <a href="tel:+9779809299405">+977-9809299405</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-text">
+                  <strong>Permanent Address</strong>
+                  <span>VDC Parwanipur-3, Ward No. 3, Bara, Nepal</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-id-card"></i></div>
+                <div class="contact-text">
+                  <strong>NPC Registration No.</strong>
+                  <span>G2392</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="social-links">
+              <a href="mailto:plexus0307@gmail.com" class="social-btn email"><i class="fas fa-envelope"></i> Email</a>
+              <a href="#" class="social-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="https://doi.org/10.5281/zenodo.10281509" target="_blank" rel="noopener" class="social-btn researchgate"><i class="fas fa-book-open"></i> Research</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location / Map -->
+        <div class="card map-wrap fade-in">
+          <div class="card-header">
+            <div class="card-header-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Location — Parwanipur, Bara, Nepal</h3>
+          </div>
+          <div class="map-ph">
+            <div class="map-ph-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <p>Parwanipur, Ward No. 3, Bara, Nepal</p>
+            <small>Current Workplace: Bharatpur-16, Chitwan, Nepal</small>
+          </div>
+          <div class="map-info-bar">
+            <span class="map-info-chip"><i class="fas fa-map-pin"></i> Parwanipur, Bara District, Madhesh Province, Nepal</span>
+            <span class="map-info-chip"><i class="fas fa-building"></i> Office: Saranpur, Bharatpur-16, Chitwan</span>
+            <span class="map-info-chip"><i class="fas fa-globe"></i> Country: Nepal 🇳🇵</span>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="card fade-in">
+          <div class="card-header">
+            <div class="card-header-icon"><i class="fas fa-clock"></i></div>
+            <h3>Availability &amp; Response Times</h3>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="hours-table">
+              <tr>
+                <td>Sunday – Friday</td>
+                <td class="hours-available"><i class="fas fa-check-circle"></i> Available (9:00 AM – 5:00 PM NST)</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td class="hours-available"><i class="fas fa-circle" style="color:#f39c12;"></i> Limited Availability</td>
+              </tr>
+              <tr>
+                <td>Public Holidays</td>
+                <td class="hours-closed"><i class="fas fa-times-circle"></i> Closed</td>
+              </tr>
+              <tr>
+                <td>Email Response Time</td>
+                <td><strong>Within 1–2 Business Days</strong></td>
+              </tr>
+              <tr>
+                <td>Phone Availability</td>
+                <td><strong>Office Hours (Sun–Fri)</strong></td>
+              </tr>
+              <tr>
+                <td>Time Zone</td>
+                <td><strong>Nepal Standard Time (UTC+5:45)</strong></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="card fade-in">
+          <div class="card-header">
+            <div class="card-header-icon"><i class="fas fa-question-circle"></i></div>
+            <h3>Frequently Asked Questions</h3>
+          </div>
+          <div class="card-body">
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                What areas of pharmaceutical consultancy do you offer?
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-a">
+                <p>I offer professional guidance in Quality Control laboratory management, GMP compliance, analytical method validation (HPLC, UV, GC, AAS, FTIR), OOS/OOT investigation, CAPA implementation, data integrity (ALCOA+), WHO-GMP and ICH guideline implementation, and stability study planning. I also provide in-house training support for QC personnel.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Are you available for collaborations on research publications?
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-a">
+                <p>Yes, I welcome research collaboration opportunities in pharmaceutical sciences, quality control, pharmacology, and related fields. I have authored 3 publications in international peer-reviewed journals with impact factors of 7.4–7.5. Please email me with your research proposal and we can discuss the scope of collaboration.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Do you provide GMP audit support for pharmaceutical companies in Nepal?
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-a">
+                <p>With over 10 years of experience in GMP-compliant environments and thorough knowledge of WHO-GMP, DDA Nepal regulations, ASEAN GMP, and USFDA guidelines, I can provide professional support for GMP audit preparation, documentation review, and compliance gap analysis. Please contact me to discuss your specific requirements.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                What languages can you conduct training or communication in?
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-a">
+                <p>I am fluent in English, Nepali, Hindi, Bengali, and Bhojpuri — both written and spoken. I can conduct training sessions and professional communications in any of these languages, making me accessible to pharmaceutical professionals across Nepal, India, and Bangladesh.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                How can I access your published research papers?
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="faq-a">
+                <p>My published papers are indexed in the International Journal of Pharmaceutical Research and Applications and International Journal in Pharmaceutical Sciences. You can access them via the DOI links provided on the About Author page, or contact me directly and I will share available copies as permissible under the journal's open access policy.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+
+        <!-- Author Bio -->
+        <div class="widget">
+          <div class="widget-title"><i class="fas fa-user-circle"></i> About the Author</div>
+          <div class="sidebar-author">
+            <img src="image of pradeep kumar.png" alt="Pradeep Kumar" class="sidebar-avatar" />
+            <h4>Pradeep Kumar</h4>
+            <p>QC Manager | B.Pharma (Hons)<br/>NPC Reg. No. G2392<br/>10+ Years in Pharma QC</p>
+            <a href="index.html" class="profile-btn">View Full Profile</a>
+          </div>
+        </div>
+
+        <!-- Quick Contact -->
+        <div class="widget">
+          <div class="widget-title"><i class="fas fa-address-book"></i> Quick Contact</div>
+          <div class="widget-body" style="padding:14px 16px;">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <a href="mailto:plexus0307@gmail.com" style="display:flex;align-items:center;gap:10px;color:var(--text-medium);font-size:13.5px;transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-medium)'">
+                <div style="width:36px;height:36px;background:rgba(232,115,12,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:15px;flex-shrink:0;">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <span>plexus0307@gmail.com</span>
+              </a>
+              <a href="tel:+9779821811294" style="display:flex;align-items:center;gap:10px;color:var(--text-medium);font-size:13.5px;transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-medium)'">
+                <div style="width:36px;height:36px;background:rgba(232,115,12,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:15px;flex-shrink:0;">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <span>+977-9821811294</span>
+              </a>
+              <a href="tel:+9779809299405" style="display:flex;align-items:center;gap:10px;color:var(--text-medium);font-size:13.5px;transition:var(--transition);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-medium)'">
+                <div style="width:36px;height:36px;background:rgba(232,115,12,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:15px;flex-shrink:0;">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <span>+977-9809299405</span>
+              </a>
+              <div style="display:flex;align-items:flex-start;gap:10px;color:var(--text-medium);font-size:13.5px;">
+                <div style="width:36px;height:36px;background:rgba(232,115,12,0.1);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:15px;flex-shrink:0;margin-top:2px;">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>Parwanipur-3, Bara, Nepal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Articles -->
+        <div class="widget">
+          <div class="widget-title"><i class="fas fa-fire"></i> Popular Articles</div>
+          <div class="widget-body" style="padding:12px 16px;">
+            <div class="pop-post">
+              <span class="pop-num">1</span>
+              <div class="pop-info">
+                <h5><a href="articles.html">HPLC Method Validation Guide</a></h5>
+                <span><i class="fas fa-eye"></i> 8,420 views</span>
+              </div>
+            </div>
+            <div class="pop-post">
+              <span class="pop-num">2</span>
+              <div class="pop-info">
+                <h5><a href="articles.html">OOS Investigation Procedure</a></h5>
+                <span><i class="fas fa-eye"></i> 6,180 views</span>
+              </div>
+            </div>
+            <div class="pop-post">
+              <span class="pop-num">3</span>
+              <div class="pop-info">
+                <h5><a href="articles.html">WHO-GMP Compliance</a></h5>
+                <span><i class="fas fa-eye"></i> 5,760 views</span>
+              </div>
+            </div>
+            <div class="pop-post">
+              <span class="pop-num">4</span>
+              <div class="pop-info">
+                <h5><a href="articles.html">ICH Q1A Stability Testing</a></h5>
+                <span><i class="fas fa-eye"></i> 4,930 views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="widget">
+          <div class="widget-title"><i class="fas fa-bell"></i> Newsletter</div>
+          <div class="widget-body">
+            <div class="sub-form">
+              <p>Subscribe for the latest pharma guidelines and QC updates.</p>
+              <input type="email" id="sub-email" placeholder="Your email address" aria-label="Email" />
+              <button class="sub-btn" onclick="handleSubscribe()"><i class="fas fa-paper-plane"></i> Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>PharmaGuidelines</h4>
+            <p>A professional platform by Pradeep Kumar, QC Manager &amp; pharmaceutical expert with over 10 years of experience in quality control, GMP compliance, and analytical science across Nepal's pharmaceutical sector.</p>
+            <p><strong style="color:#fff;">NPC Reg. No.:</strong> G2392</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">About Author</a></li>
+              <li><a href="articles.html">Pharma Guidelines</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Expertise</h4>
+            <ul class="footer-links">
+              <li><a href="articles.html">Quality Control</a></li>
+              <li><a href="articles.html">ICH Guidelines</a></li>
+              <li><a href="articles.html">WHO-GMP</a></li>
+              <li><a href="articles.html">Validation</a></li>
+              <li><a href="articles.html">Data Integrity</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:plexus0307@gmail.com"><i class="fas fa-envelope"></i> plexus0307@gmail.com</a></li>
+              <li><a href="tel:+9779821811294"><i class="fas fa-phone"></i> +977-9821811294</a></li>
+              <li><a href="tel:+9779809299405"><i class="fas fa-phone"></i> +977-9809299405</a></li>
+              <li><a href="#"><i class="fas fa-map-marker-alt"></i> Parwanipur, Bara, Nepal</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2026 PharmaGuidelines by Pradeep Kumar. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => navMenu.classList.toggle('open'));
+
+    // Scroll to top
+    const scrollTop = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollTop.classList.toggle('visible', window.scrollY > 300);
+    });
+
+    // Contact form submit
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const fname = document.getElementById('fname').value.trim();
+      const lname = document.getElementById('lname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+      const consent = document.getElementById('consent').checked;
+
+      if (!fname || !lname) { showToast('⚠️ Please enter your full name.', false); return; }
+      if (!email || !email.includes('@')) { showToast('⚠️ Please enter a valid email address.', false); return; }
+      if (!subject) { showToast('⚠️ Please select a subject.', false); return; }
+      if (!message) { showToast('⚠️ Please enter your message.', false); return; }
+      if (!consent) { showToast('⚠️ Please agree to the terms to proceed.', false); return; }
+
+      const btn = document.getElementById('submit-btn');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        document.getElementById('form-area').style.display = 'none';
+        const success = document.getElementById('form-success');
+        success.style.display = 'flex';
+        showToast('✅ Message sent! Thank you for reaching out.', true);
+      }, 1800);
+    });
+
+    // Subscribe
+    function handleSubscribe() {
+      const email = document.getElementById('sub-email').value.trim();
+      if (!email || !email.includes('@')) {
+        showToast('⚠️ Please enter a valid email address.', false);
+        return;
+      }
+      showToast('✅ Subscribed successfully! Thank you.', true);
+      document.getElementById('sub-email').value = '';
+    }
+
+    // Toast
+    function showToast(msg, success = true) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.className = 'toast' + (success ? ' success' : '') + ' show';
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    // FAQ accordion
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      const isOpen = el.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(q => {
+        q.classList.remove('open');
+        q.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        el.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+
+    // Animate cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = 1;
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.card, .contact-intro-card').forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(18px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.28s ease';
+      observer.observe(card);
+    });
+
+    // Search
+    document.getElementById('search-btn').addEventListener('click', () => {
+      const q = document.getElementById('search-input').value.trim();
+      if (q) window.location.href = `articles.html?q=${encodeURIComponent(q)}`;
+    });
+    document.getElementById('search-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') document.getElementById('search-btn').click();
+    });
+  </script>
+</body>
+</html>
